@@ -1,13 +1,12 @@
-title: Your Name | Software Engineer
+title: Cory Koch | Software Engineer
 email: your.email@example.com
 description: >-
   A personal blog about software engineering, cloud architecture,
   and modern development practices.
 baseurl: ""
 url: "https://yourusername.github.io"
-twitter_username: yourusername
-github_username: yourusername
-linkedin_username: yourname
+github_username: ckoch786
+linkedin_username: cory-koch
 
 # Build settings
 markdown: kramdown
@@ -34,7 +33,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Your Name"
+      author: "Cory Koch"
   - scope:
       path: ""
       type: "pages"
