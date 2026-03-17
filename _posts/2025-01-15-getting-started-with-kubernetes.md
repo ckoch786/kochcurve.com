@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Getting Started with Kubernetes: A Practical Guide"
