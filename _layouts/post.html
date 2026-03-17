@@ -31,12 +31,8 @@ LinkedIn
 
 
 {% if page.previous.url %}
-
-← {{ page.previous.title }}
-
+<p><a href="{{ page.previous.url }}">← {{ page.previous.title }}</a></p>
 {% endif %}
 {% if page.next.url %}
-
-{{ page.next.title }} →
-
+<p><a href="{{ page.next.url }}">{{ page.next.title }} →</a></p>
 {% endif %}
