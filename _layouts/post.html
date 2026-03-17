@@ -1,3 +1,4 @@
+{% include header.html %}
 <article class="post">
   <header class="post-header">
     <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}</p>
@@ -28,3 +29,4 @@
     {% endif %}
   </nav>
 </article>
+{% include footer.html %}
