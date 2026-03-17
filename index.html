@@ -3,18 +3,18 @@ layout: default
 title: Home
 ---
 
-<section>
+<section class="page-header">
   <h1>Welcome to My Software Engineering Blog</h1>
-  <p>Exploring modern development practices, cloud architecture, and engineering excellence</p>
+  <p>Exploring modern development practices, cloud architecture, and engineering excellence.</p>
 </section>
-<section>
+<section class="post-list">
   <h2>Latest Posts</h2>
   {% for post in site.posts limit:10 %}
-    <article>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p>{{ post.date | date: "%B %d, %Y" }}</p>
-      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-      <a href="{{ post.url }}">Read more →</a>
-    </article>
+  <article class="post-card">
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+    <a class="read-more" href="{{ post.url }}">Read more →</a>
+  </article>
   {% endfor %}
 </section>
