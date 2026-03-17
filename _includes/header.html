@@ -1,3 +1,8 @@
-{{ site.title }}
-
-{% include nav.html %}
+<header class="site-header">
+  <div class="site-brand">
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  </div>
+  <nav class="site-nav">
+    {% include nav.html %}
+  </nav>
+</header>

@@ -1,38 +1,30 @@
-{{ page.title }}
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.tags %}
+    <p class="post-tags">
+      {% for tag in page.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
+    </p>
+    {% endif %}
+  </header>
 
+  <div class="post-content">
+    {{ content }}
+  </div>
 
-{{ page.date | date: "%B %d, %Y" }}
+  <div class="post-share">
+    <span>Share:</span>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url }}" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
 
-{% if page.author %}
-by {{ page.author }}
-{% endif %}
-{% if page.tags %}
-
-{% for tag in page.tags %}
-{{ tag }}
-{% endfor %}
-
-{% endif %}
-
-
-
-
-{{ content }}
-
-
-
-
-Share this post
-Twitter
-LinkedIn
-
-
-
-
-
-{% if page.previous.url %}
-<p><a href="{{ page.previous.url }}">← {{ page.previous.title }}</a></p>
-{% endif %}
-{% if page.next.url %}
-<p><a href="{{ page.next.url }}">{{ page.next.title }} →</a></p>
-{% endif %}
+  <nav class="post-nav">
+    {% if page.previous.url %}
+    <a class="prev-post" href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="next-post" href="{{ page.next.url }}">{{ page.next.title }} →</a>
+    {% endif %}
+  </nav>
+</article>
